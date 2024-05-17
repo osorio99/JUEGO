@@ -1,3 +1,6 @@
+  // este es una prueba
+  
+  
   function elegir(eleccionUsuario) {
       var eleccionComputadora = Math.random();
       if (eleccionComputadora < 0.34) {

@@ -1,4 +1,4 @@
-// Este es una prueba con el acumulador
+// Este es el original
 
 function elegir(eleccionUsuario) {
     var eleccionComputadora = Math.random();
@@ -11,26 +11,20 @@ function elegir(eleccionUsuario) {
     }
     let usuario=0
     let compu=0
+    var resultado = "";
     do{
-        if (eleccionUsuario === eleccionComputadora) {
-            resultado = "Es un empate!";
-          } else if (
+        if (
             (eleccionUsuario === "piedra" && eleccionComputadora === "tijera") ||
             (eleccionUsuario === "papel" && eleccionComputadora === "piedra") ||
             (eleccionUsuario === "tijera" && eleccionComputadora === "papel")
           ) {
-             usuario++
-            //resultado = "¡Ganaste!";
-            
+            usuario+=
+            resultado = "¡Ganaste!";
           } else {
-              comp++
-            //resultado = "¡Perdiste!";
+            compu+= 
+            resultado = "¡Perdiste!";
           }
-          
-    }while(usuario == 3 && compu == 3);
-        if(compu >= 3){
-        console.log("Gano la maquina");
-    }else{
-        console.log("Gano el jugador")
-    }
-}
+    }while(usuario <3 && compu <3)
+    document.getElementById("resultado").innerText = "La computadora eligió: " + eleccionComputadora + ". " ;
+    document.getElementById("resultado2").innerText = "El usuario eligió: " + eleccionUsuario + ". " + resultado;
+  }
